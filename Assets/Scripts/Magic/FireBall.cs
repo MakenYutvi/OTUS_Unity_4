@@ -35,7 +35,6 @@ public class FireBall : MonoBehaviour
     _end = _mainCamera.ScreenPointToRay(_center).GetPoint(29);
     }
 
-    // Update is called once per frame
     void Update()
     {
         current += dir * speed * Time.deltaTime;
@@ -46,17 +45,13 @@ public class FireBall : MonoBehaviour
                 Debug.Log("End");
                 transform.position = start.position;
                 current = 0.0f;
-            }
-        
-
+            }   
     }
 
     public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.GetComponent<PlayerAnimation>() != null)
         {
-            Debug.Log(collision.gameObject.name);
-            // if (!collision.gameObject.CompareTag("Player"))
             explosionBegin();
         }
 
@@ -84,16 +79,13 @@ public class FireBall : MonoBehaviour
             }
         }
 
-       // _grenadeLauncher.ReadyShoot();
         StartCoroutine(_Wait());
-        //
     }
 
     IEnumerator _Wait()
     {
 
         yield return new WaitForSecondsRealtime(_Particleduration);
-        //_grenadeLauncher.ReadyShoot();
         Destroy(gameObject);
 
     }
