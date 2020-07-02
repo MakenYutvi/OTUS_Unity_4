@@ -8,6 +8,7 @@ public sealed class SelectWeapon : MonoBehaviourPunCallbacks
     public Mortar Mortar;
     public PlayerAnimation PlayerAnimation;
     public FireBallGenerator _fireBallGenerator;
+    public LightningGenerator _lightningGenerator;
     bool isBot;
 
     private void Start()
@@ -28,6 +29,7 @@ public sealed class SelectWeapon : MonoBehaviourPunCallbacks
             GrenadeLauncher.SetPlayerAnimation(PlayerAnimation);
             Mortar.SetPlayerAnimation(PlayerAnimation);
             _fireBallGenerator.SetPlayerAnimation(PlayerAnimation);
+            _lightningGenerator.SetPlayerAnimation(PlayerAnimation);
         }
     }
 
@@ -60,6 +62,12 @@ public sealed class SelectWeapon : MonoBehaviourPunCallbacks
             _fireBallGenerator.SetActive(true);
 
         }
+         if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            WeaponsSetActiveFalse();
+            _lightningGenerator.SetActive(true);
+
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -73,5 +81,6 @@ public sealed class SelectWeapon : MonoBehaviourPunCallbacks
         GrenadeLauncher.SetActive(false);
         Mortar.SetActive(false);
         _fireBallGenerator.SetActive(false);
+        _lightningGenerator.SetActive(false);
     }
 }
