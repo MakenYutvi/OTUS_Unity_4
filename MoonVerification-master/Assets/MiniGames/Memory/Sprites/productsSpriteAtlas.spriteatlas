@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: productsSpriteAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: b9ffaf54b671195469dd051b91b8e5f5, type: 3}
+    totalSpriteSurfaceArea: 7492700
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 60430b8375d55ce4299a2c536e000373, type: 3}
+  - {fileID: 21300000, guid: 49f2aba329a82d14f90d74e4394ca90a, type: 3}
+  - {fileID: 21300000, guid: 22916bb41df227448a65f05e7f639d40, type: 3}
+  - {fileID: 21300000, guid: c4cc6ee40c433554d99c3a8b1303dae0, type: 3}
+  - {fileID: 21300000, guid: ad5aa6d56f3a14541bd4707e8045142d, type: 3}
+  - {fileID: 21300000, guid: d0bcd466671e2c8479aad042c655f0f6, type: 3}
+  - {fileID: 21300000, guid: 8e7522f76dc5abb49bbffd7b787859f9, type: 3}
+  - {fileID: 21300000, guid: 2eb3cef84ca462846831444b37277f1c, type: 3}
+  - {fileID: 21300000, guid: b7c47f899171cb44db7e6a3a57d4ce81, type: 3}
+  - {fileID: 21300000, guid: 10f03f7a4ce01304aaab32918397cf90, type: 3}
+  - {fileID: 21300000, guid: a2fb1e2d8df5fd1429bd4fcf398656b8, type: 3}
+  - {fileID: 21300000, guid: 127fe82f427b291479185351e11a7b2c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - p_12
+  - p_05
+  - p_03
+  - p_01
+  - p_02
+  - p_10
+  - p_06
+  - p_04
+  - p_11
+  - p_09
+  - p_07
+  - p_08
+  m_Tag: productsSpriteAtlas
+  m_IsVariant: 0

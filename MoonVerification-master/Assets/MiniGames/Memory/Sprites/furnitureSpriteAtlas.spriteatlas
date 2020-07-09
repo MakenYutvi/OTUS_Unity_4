@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: furnitureSpriteAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 9f464118c1a131844bf8d3356f861d77, type: 3}
+    totalSpriteSurfaceArea: 8285702
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: e793150158434c941a1e4635aa491983, type: 3}
+  - {fileID: 21300000, guid: 8f364501e202a2e47a9505f22054cf2e, type: 3}
+  - {fileID: 21300000, guid: 35b2dc239e1a9f94c989a14475dec0ad, type: 3}
+  - {fileID: 21300000, guid: c94dc6a3234ab0f42bf560fbdcb3e3ca, type: 3}
+  - {fileID: 21300000, guid: 26ef8cd690889774090a1b0814a52a2a, type: 3}
+  - {fileID: 21300000, guid: 18f33be66e0e2d546b68650977c512dc, type: 3}
+  - {fileID: 21300000, guid: 59b69d97a853c17408e901919eaea1ed, type: 3}
+  - {fileID: 21300000, guid: 1766f3d782a96b846b4aa75e79ee0c91, type: 3}
+  - {fileID: 21300000, guid: 2c1634a8e7fa21d40b449db3629a102c, type: 3}
+  - {fileID: 21300000, guid: 8d3e2f297aca241428871d4db800213e, type: 3}
+  - {fileID: 21300000, guid: 6e608789e3866614bb6bf1a6f112a4c7, type: 3}
+  - {fileID: 21300000, guid: ca5e66ea26d6497458a384ab982e3152, type: 3}
+  - {fileID: 21300000, guid: f494491b0f288474f8d03620a084a7cf, type: 3}
+  - {fileID: 21300000, guid: 81d02a5bafdb36242af951c962fab1e2, type: 3}
+  - {fileID: 21300000, guid: 74aa0e0c9d8b5c945a7974371bc76972, type: 3}
+  - {fileID: 21300000, guid: 26c387ec542587844aadf2169985aaee, type: 3}
+  - {fileID: 21300000, guid: 33e99a3e415ec8d4cbb91298d9d40ca8, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - f_01
+  - clock
+  - piramid
+  - f_04
+  - cupboard_2
+  - gramophone
+  - f_03
+  - f_02
+  - barrel
+  - hair
+  - cupboard_4
+  - clock_2
+  - f_05
+  - ula
+  - figure
+  - cupboard_1
+  - cupboard_3
+  m_Tag: furnitureSpriteAtlas
+  m_IsVariant: 0

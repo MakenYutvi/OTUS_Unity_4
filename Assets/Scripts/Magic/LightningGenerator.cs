@@ -5,7 +5,7 @@ using Photon.Pun;
 
 public class LightningGenerator : MonoBehaviour
 {
-    public int ManaCost = 1;
+    public float ManaCost = 1f;
     private int _layerMask;
     private PlayerAnimation _playerAnimation;
     private readonly float _dedicateDistance = 20.0f;

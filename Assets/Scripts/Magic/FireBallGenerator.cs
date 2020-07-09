@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireBallGenerator : MonoBehaviour
 {
-    public int ManaCost = 10;
+    public float ManaCost = 10f;
     private PlayerAnimation _playerAnimation;
     private readonly float _dedicateDistance = 20.0f;
     private bool _isReady = true;
