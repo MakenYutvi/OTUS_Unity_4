@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System;
+using Core.Customs;
+using Object = UnityEngine.Object;
+
 
 [CreateAssetMenu(menuName = "SpellSO")]
 public class SpellSO : ScriptableObject
@@ -16,9 +21,12 @@ public class SpellSO : ScriptableObject
     [SerializeField] private GameObject _prefabOfSpell;
     [SerializeField] private float _maxDistanceToTarget = 20.0f;
     [SerializeField] private bool _spellFromCaster;
+
+    //private static readonly Lazy<SpellSO> _instance = new Lazy<SpellSO>(() => Load<SpellSO>("ScriptableObjects/Spells/" + typeof(SpellSO).Name));
     #endregion
 
     #region Properties
+   // public static SpellSO Instance => _instance.Value;
     public float BaseDamege
     {
         get
@@ -74,11 +82,7 @@ public class SpellSO : ScriptableObject
     public GameObject PrefabOfSpell
     {
         get
-        {
-           // if (_prefabOfSpell == null)
-          //  {
-         //       _prefabOfSpell = Resources.Load("Spells/FireBallPrototype.prefab") as GameObject;
-         //   }
+        {       
             return _prefabOfSpell;
         }
     }
@@ -96,6 +100,13 @@ public class SpellSO : ScriptableObject
             return _spellFromCaster;
         }
     }
+    #endregion
+
+    #region Methods
+
+    private static T Load<T>(string resourcesPath) where T : Object =>
+        CustomResources.Load<T>(Path.ChangeExtension(resourcesPath, null));
+
     #endregion
 }
 

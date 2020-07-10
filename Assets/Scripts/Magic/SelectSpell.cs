@@ -3,11 +3,14 @@ using UnityEngine;
 
 public sealed class SelectSpell : MonoBehaviourPunCallbacks
 {
+    #region Data
     public PlayerAnimation PlayerAnimation;
     private Spell _spell;
     bool isBot;
     private SpellSO _SpellSO;
+    #endregion
 
+    #region UnityMethods
     private void Start()
     {
         _spell = GetComponentInChildren<Spell>();
@@ -49,7 +52,9 @@ public sealed class SelectSpell : MonoBehaviourPunCallbacks
             
         }
     }
+    #endregion
 
+    #region Methods
     public void WeaponsSetActiveFalse()
     {
   
@@ -76,6 +81,6 @@ public sealed class SelectSpell : MonoBehaviourPunCallbacks
         return _SpellSO;
     }
 
- 
+    #endregion
 
 }

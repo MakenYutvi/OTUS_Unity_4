@@ -7,16 +7,16 @@ public class Spell : MonoBehaviour
 {
 
     #region SO Data
-    private float _baseDamage;
-    private float _castTime = 1f;
-    private float _cooldown = 1f;
-    private float _radiusOfExplosion;
-    private LayerMask _layerMask;
-    private float _projectileSpeed;
-    private float _manaCost = 10;
-    private GameObject _prefabOfSpell;
-    private float _maxDistanceToTarget = 20.0f;
-    private bool _spellFromCaster;
+    //private float _baseDamage;
+    //private float _castTime = 1f;
+    //private float _cooldown = 1f;
+    //private float _radiusOfExplosion;
+    //private LayerMask _layerMask;
+    //private float _projectileSpeed;
+    //private float _manaCost = 10;
+    //private GameObject _prefabOfSpell;
+    //private float _maxDistanceToTarget = 20.0f;
+    //private bool _spellFromCaster;
     #endregion
 
     private PlayerAnimation _playerAnimation;
@@ -49,7 +49,7 @@ public class Spell : MonoBehaviour
             {
                 SpellCast(_mainCamera.ScreenPointToRay(_center));
                 _isReady = false;
-                Invoke(nameof(ReadySpellCast), _cooldown);
+                Invoke(nameof(ReadySpellCast), _SpellSO.Cooldown);
             }
 
             if (Input.GetMouseButtonDown(0) && HasEnoughMana() && gameObject.activeInHierarchy)
@@ -69,16 +69,16 @@ public class Spell : MonoBehaviour
     public void SetSOData(SpellSO _SO)
     {
     _SpellSO = _SO;
-    _baseDamage = _SpellSO.BaseDamege;
-    _castTime = _SpellSO.CastTime;
-    _cooldown = _SpellSO.Cooldown;
-    _radiusOfExplosion = _SpellSO.RadiusOfExplosion;
-    _layerMask = _SpellSO.LayerMask;
-    _projectileSpeed= _SpellSO.ProjectileSpeed;
-    _manaCost = _SpellSO.ManaCost;
-    _prefabOfSpell = _SpellSO.PrefabOfSpell;
-    _maxDistanceToTarget = _SpellSO.MaxDistanceToTarget;
-    _spellFromCaster = _SpellSO.SpellFromCaster;
+    //_baseDamage = _SpellSO.BaseDamege;
+    //_castTime = _SpellSO.CastTime;
+    //_cooldown = _SpellSO.Cooldown;
+    //_radiusOfExplosion = _SpellSO.RadiusOfExplosion;
+    //_layerMask = _SpellSO.LayerMask;
+    //_projectileSpeed= _SpellSO.ProjectileSpeed;
+    //_manaCost = _SpellSO.ManaCost;
+    //_prefabOfSpell = _SpellSO.PrefabOfSpell;
+    //_maxDistanceToTarget = _SpellSO.MaxDistanceToTarget;
+    //_spellFromCaster = _SpellSO.SpellFromCaster;
 }
     public void SetPlayerAnimation(PlayerAnimation playerAnimation)
     {
@@ -102,16 +102,17 @@ public class Spell : MonoBehaviour
 
     public void SpellCast(Ray ray)
     {
-        _mana.Count -= _manaCost;
-        _InstantiateGameObject = PhotonNetwork.Instantiate(_prefabOfSpell.name, gameObject.transform.position, gameObject.transform.rotation,0);
-        if (_spellFromCaster)
+        _mana.Count -= _SpellSO.ManaCost;
+        _InstantiateGameObject = PhotonNetwork.Instantiate(_SpellSO.PrefabOfSpell.name, gameObject.transform.position, gameObject.transform.rotation,0);
+        //
+        if (_SpellSO.SpellFromCaster)
         {
             _InstantiateGameObject.transform.position = gameObject.transform.position;
         }
         else
         {
-            _InstantiateGameObject.transform.position = ray.GetPoint(_maxDistanceToTarget); ;
-            foreach (var hit in Physics.RaycastAll(ray, _maxDistanceToTarget))
+            _InstantiateGameObject.transform.position = ray.GetPoint(_SpellSO.MaxDistanceToTarget); ;
+            foreach (var hit in Physics.RaycastAll(ray, _SpellSO.MaxDistanceToTarget))
             {
                 if (hit.collider)
                 {

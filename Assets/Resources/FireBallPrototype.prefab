@@ -110,12 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aba7d91c7c4d674d97d7260d6ccc76b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _radius: 5
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 4096
-  _damage: 50
-  speed: 1
+  _spellSO: {fileID: 11400000, guid: b0c37b002bf4cd346b503d7f92503e2d, type: 2}
 --- !u!114 &8430969367751424881
 MonoBehaviour:
   m_ObjectHideFlags: 0
