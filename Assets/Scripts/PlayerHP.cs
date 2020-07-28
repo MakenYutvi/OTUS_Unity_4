@@ -61,11 +61,13 @@ namespace DefaultNamespace
                 if (isBot)
                 {
                     PhotonNetwork.RaiseEvent(1, gameObject.name, raiseEventOptions, sendOptions);
+                    gameObject.SetActive(false);
                 }
                 else
                 {
                     PhotonNetwork.RaiseEvent(1, PlayerPrefs.GetString("NameOfPlayer"), raiseEventOptions, sendOptions);
                     PhotonNetwork.RaiseEvent(1, PhotonNetwork.NickName, raiseEventOptions, sendOptions);
+                   // gameObject.SetActive(false);
                 }
                 // PhotonNetwork.RaiseEvent(1, gameObject.name, raiseEventOptions, sendOptions);
               //  PhotonNetwork.LoadLevel("InitialScene");

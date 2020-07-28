@@ -4,13 +4,15 @@ using UnityEngine.AI;
 
 public class BotUtility : MonoBehaviour
 {
-    Gun gun;
+    //Gun gun;
+    Spell spell;
     NavMeshAgent navMeshAgent;
 
     void Awake()
     {
-        gun = GetComponentInChildren<Gun>();
+     //   gun = GetComponentInChildren<Gun>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        spell = GetComponentInChildren<Spell>();
     }
 
     T FindClosest<T>()
@@ -87,7 +89,7 @@ public class BotUtility : MonoBehaviour
         navMeshAgent.isStopped = true;
 
         Vector3 start = transform.position;
-        Vector3 end = target.transform.position;
+        Vector3 end = target.transform.position + new Vector3(Random.Range(-0.5f, 0.5f),0, Random.Range(-0.5f, 0.5f));
         start.y += 1.0f;
         end.y += 1.0f;
 
@@ -98,12 +100,16 @@ public class BotUtility : MonoBehaviour
         Ray ray = new Ray(start, direction);
         Debug.DrawLine(start, end, Color.white, 5.0f);
 
-        gun.BeginAnimateShoot();
-        return gun.Shoot(ray);
+        //gun.BeginAnimateShoot();
+        spell.BeginAnimateSpellCast();
+        spell.SpellCast(ray);
+        return true;
+       // return gun.Shoot(ray);
     }
 
     public void EndAttack()
     {
-        gun.EndAnimateShoot();
+       // gun.EndAnimateShoot();
+        spell.EndAnimateSpellCast();
     }
 }

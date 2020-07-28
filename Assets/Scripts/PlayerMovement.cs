@@ -33,7 +33,10 @@ public sealed class PlayerMovement : MonoBehaviour
             _playerAnimation.SetMove(_agent.velocity);
             return;
         }
-
+        if (!_agent.isOnNavMesh)
+        {
+            return;
+        }
         var timeDelta = Time.deltaTime;
         var horizontal = Input.GetAxis(HORIZONTAL);
         var vertical = Input.GetAxis(VERTICAL);

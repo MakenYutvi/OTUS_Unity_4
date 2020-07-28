@@ -15,7 +15,7 @@ public sealed class SelectSpell : MonoBehaviourPunCallbacks
     {
         _spell = GetComponentInChildren<Spell>();
         isBot = GetComponent<BotUtility>() != null;
-
+        _spell.SetSOData(GetFireBallSO());
       //  Gun.SetActive(isBot);
         if (!photonView.IsMine)
         {
@@ -23,11 +23,16 @@ public sealed class SelectSpell : MonoBehaviourPunCallbacks
             return;
         }
 
-       // Gun.SetPlayerAnimation(PlayerAnimation);
+        // Gun.SetPlayerAnimation(PlayerAnimation);
+        _spell.SetPlayerAnimation(PlayerAnimation);
         if (!isBot)
         {
-            WeaponsSetActiveFalse();
-            _spell.SetPlayerAnimation(PlayerAnimation);
+           
+           
+        }
+        else
+        {
+            _spell.SetSOData(GetLightningSO());
         }
     }
 

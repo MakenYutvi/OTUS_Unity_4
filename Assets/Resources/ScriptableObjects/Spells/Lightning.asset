@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130e14276cad75b4db9df85ecb3d8b9e, type: 3}
   m_Name: Lightning
   m_EditorClassIdentifier: 
-  _baseDamage: 200
+  _baseDamage: 50
   _castTime: 1
   _cooldown: 1
-  _radiusOfExplosion: 5
+  _radiusOfExplosion: 1
   _layerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 6144
   _projectileSpeed: 0
   _manaCost: 20
   _prefabOfSpell: {fileID: 106988, guid: 15dec7b07032b2f4aa6f855bfbe120f7, type: 3}

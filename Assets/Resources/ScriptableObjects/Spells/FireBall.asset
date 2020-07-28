@@ -18,7 +18,7 @@ MonoBehaviour:
   _radiusOfExplosion: 5
   _layerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 6144
   _projectileSpeed: 1
   _manaCost: 10
   _prefabOfSpell: {fileID: 3046247441621729563, guid: 6b10aa93fd8bcab4ea5bebfa295e7ead,

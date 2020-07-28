@@ -15,7 +15,8 @@ public sealed class SelectWeapon : MonoBehaviourPunCallbacks
     {
         isBot = GetComponent<BotUtility>() != null;
         
-        Gun.SetActive(isBot);
+        Gun.SetActive(false);
+        //Gun.SetActive(isBot);
         if (!photonView.IsMine)
         {
             Destroy(this);
