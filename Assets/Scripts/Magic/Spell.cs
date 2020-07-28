@@ -6,19 +6,6 @@ using Photon.Pun;
 public class Spell : MonoBehaviour
 {
 
-    #region SO Data
-    //private float _baseDamage;
-    //private float _castTime = 1f;
-    //private float _cooldown = 1f;
-    //private float _radiusOfExplosion;
-    //private LayerMask _layerMask;
-    //private float _projectileSpeed;
-    //private float _manaCost = 10;
-    //private GameObject _prefabOfSpell;
-    //private float _maxDistanceToTarget = 20.0f;
-    //private bool _spellFromCaster;
-    #endregion
-
     private PlayerAnimation _playerAnimation;
     private bool _isReady = true;
     private Mana _mana;
@@ -69,16 +56,6 @@ public class Spell : MonoBehaviour
     public void SetSOData(SpellSO _SO)
     {
     _SpellSO = _SO;
-    //_baseDamage = _SpellSO.BaseDamege;
-    //_castTime = _SpellSO.CastTime;
-    //_cooldown = _SpellSO.Cooldown;
-    //_radiusOfExplosion = _SpellSO.RadiusOfExplosion;
-    //_layerMask = _SpellSO.LayerMask;
-    //_projectileSpeed= _SpellSO.ProjectileSpeed;
-    //_manaCost = _SpellSO.ManaCost;
-    //_prefabOfSpell = _SpellSO.PrefabOfSpell;
-    //_maxDistanceToTarget = _SpellSO.MaxDistanceToTarget;
-    //_spellFromCaster = _SpellSO.SpellFromCaster;
 }
     public void SetPlayerAnimation(PlayerAnimation playerAnimation)
     {
