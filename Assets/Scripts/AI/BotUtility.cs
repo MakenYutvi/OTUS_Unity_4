@@ -89,7 +89,7 @@ public class BotUtility : MonoBehaviour
         navMeshAgent.isStopped = true;
 
         Vector3 start = transform.position;
-        Vector3 end = target.transform.position + new Vector3(Random.Range(-0.5f, 0.5f),0, Random.Range(-0.5f, 0.5f));
+        Vector3 end = target.transform.position + new Vector3(Random.Range(-0.35f, 0.35f),0, Random.Range(-0.35f, 0.35f));
         start.y += 1.0f;
         end.y += 1.0f;
 

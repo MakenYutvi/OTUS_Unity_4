@@ -16,23 +16,25 @@ public sealed class SelectSpell : MonoBehaviourPunCallbacks
         _spell = GetComponentInChildren<Spell>();
         isBot = GetComponent<BotUtility>() != null;
         _spell.SetSOData(GetFireBallSO());
-      //  Gun.SetActive(isBot);
         if (!photonView.IsMine)
         {
             Destroy(this);
             return;
         }
 
-        // Gun.SetPlayerAnimation(PlayerAnimation);
         _spell.SetPlayerAnimation(PlayerAnimation);
-        if (!isBot)
+        if (isBot)
         {
-           
-           
-        }
-        else
-        {
-            _spell.SetSOData(GetLightningSO());
+            float i = Random.Range(-1.0f,1.0f) ;
+            if ( i < 0.0f)
+            {
+                _spell.SetSOData(GetLightningSO());
+            }
+            else
+            {
+                _spell.SetSOData(GetFireBallSO());
+            }
+            
         }
     }
 
